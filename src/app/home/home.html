@@ -1,1 +1,129 @@
-<p>home works!</p>
+<section class="hero-section">
+        <div class="carousel-container">
+            <div class="carousel-slides" id="carouselSlides">
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%232E98B2%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>Breaking News 1</text></svg>')">
+                    <div class="slide-content">
+                        <h2>Global Climate Summit Reaches Historic Agreement</h2>
+                        <p>World leaders unite on unprecedented climate action plan with binding commitments for carbon neutrality by 2050.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%2332166A%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>Tech Innovation</text></svg>')">
+                    <div class="slide-content">
+                        <h2>Revolutionary AI Breakthrough in Medical Diagnosis</h2>
+                        <p>New artificial intelligence system shows 99% accuracy in early cancer detection, promising to save millions of lives.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%232E98B2%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>Sports Victory</text></svg>')">
+                    <div class="slide-content">
+                        <h2>Underdog Team Wins Championship in Stunning Upset</h2>
+                        <p>Against all odds, the rookie team defeats defending champions in a thrilling finale that captivated millions worldwide.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%2332166A%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>Economic News</text></svg>')">
+                    <div class="slide-content">
+                        <h2>Stock Markets Reach All-Time Highs</h2>
+                        <p>Major indices surge following positive economic indicators and strong corporate earnings across multiple sectors.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%232E98B2%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>Space Discovery</text></svg>')">
+                    <div class="slide-content">
+                        <h2>New Exoplanet Discovery Could Harbor Life</h2>
+                        <p>Astronomers identify Earth-like planet in habitable zone, marking a significant milestone in the search for extraterrestrial life.</p>
+                    </div>
+                </div>
+                <!-- Duplicate slides for seamless loop -->
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%232E98B2%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>Breaking News 1</text></svg>')">
+                    <div class="slide-content">
+                        <h2>Global Climate Summit Reaches Historic Agreement</h2>
+                        <p>World leaders unite on unprecedented climate action plan with binding commitments for carbon neutrality by 2050.</p>
+                    </div>
+                </div>
+                <div class="carousel-slide" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 800 400%22><rect fill=%22%2332166A%22 width=%22800%22 height=%22400%22/><text x=%22400%22 y=%22200%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2240%22>Tech Innovation</text></svg>')">
+                    <div class="slide-content">
+                        <h2>Revolutionary AI Breakthrough in Medical Diagnosis</h2>
+                        <p>New artificial intelligence system shows 99% accuracy in early cancer detection, promising to save millions of lives.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-btn prev" (click)="previousSlide()">‹</button>
+            <button class="carousel-btn next" (click)="nextSlide()">›</button>
+        </div>
+    </section>
+
+    <!-- News Articles Section -->
+    <section class="news-section">
+        <h2 class="section-title">Latest News</h2>
+        <div class="news-grid">
+            <article class="news-card">
+                <div class="news-card-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><rect fill=%22%232E98B2%22 width=%22400%22 height=%22200%22/><text x=%22200%22 y=%22100%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22>Politics</text></svg>')"></div>
+                <div class="news-card-content">
+                    <h3>Senate Passes Landmark Infrastructure Bill</h3>
+                    <p>The comprehensive infrastructure package includes funding for roads, bridges, broadband expansion, and clean energy initiatives across the nation.</p>
+                    <div class="news-meta">
+                        <span>2 hours ago</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-card-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><rect fill=%22%2332166A%22 width=%22400%22 height=%22200%22/><text x=%22200%22 y=%22100%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22>Technology</text></svg>')"></div>
+                <div class="news-card-content">
+                    <h3>Major Tech Company Announces Quantum Computing Breakthrough</h3>
+                    <p>Scientists achieve quantum supremacy milestone that could revolutionize computing, cryptography, and scientific research.</p>
+                    <div class="news-meta">
+                        <span>4 hours ago</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-card-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><rect fill=%22%232E98B2%22 width=%22400%22 height=%22200%22/><text x=%22200%22 y=%22100%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22>Health</text></svg>')"></div>
+                <div class="news-card-content">
+                    <h3>New Study Reveals Benefits of Mediterranean Diet</h3>
+                    <p>Comprehensive research shows significant reduction in heart disease and improved cognitive function among participants following the diet.</p>
+                    <div class="news-meta">
+                        <span>6 hours ago</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-card-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><rect fill=%22%2332166A%22 width=%22400%22 height=%22200%22/><text x=%22200%22 y=%22100%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22>Business</text></svg>')"></div>
+                <div class="news-card-content">
+                    <h3>Renewable Energy Sector Sees Record Investment</h3>
+                    <p>Global investment in renewable energy reaches $300 billion, signaling strong commitment to sustainable future and clean technology.</p>
+                    <div class="news-meta">
+                        <span>8 hours ago</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-card-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><rect fill=%22%232E98B2%22 width=%22400%22 height=%22200%22/><text x=%22200%22 y=%22100%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22>Sports</text></svg>')"></div>
+                <div class="news-card-content">
+                    <h3>Olympic Records Shattered in Swimming Championships</h3>
+                    <p>Athletes break multiple world records in thrilling competition, setting new standards for excellence in aquatic sports.</p>
+                    <div class="news-meta">
+                        <span>10 hours ago</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="news-card">
+                <div class="news-card-image" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 400 200%22><rect fill=%22%2332166A%22 width=%22400%22 height=%22200%22/><text x=%22200%22 y=%22100%22 text-anchor=%22middle%22 fill=%22white%22 font-size=%2220%22>World</text></svg>')"></div>
+                <div class="news-card-content">
+                    <h3>International Peace Treaty Signed</h3>
+                    <p>Historic agreement between neighboring nations ends decades-long conflict and establishes framework for regional cooperation.</p>
+                    <div class="news-meta">
+                        <span>12 hours ago</span>
+                        <a href="#" class="read-more">Read More →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>

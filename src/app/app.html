@@ -1,14 +1,14 @@
 <header class="header">
-  <a href="#" class="logo">The Evidence</a>
+  <a routerLink="/" class="logo">The Evidence</a>
   <div class="nav-container">
     <nav>
       <ul class="nav-links">
-        <li><a href="#politics">Politics</a></li>
-        <li><a href="#technology">Technology</a></li>
-        <li><a href="#sports">Sports</a></li>
-        <li><a href="#business">Business</a></li>
-        <li><a href="#health">Health</a></li>
-        <li><a href="#world">World</a></li>
+        <li><a routerLink="/politics" routerLinkActive="act-nav">Politics</a></li>
+        <li><a routerLink="/technology" routerLinkActive="act-nav">Technology</a></li>
+        <li><a routerLink="/sports" routerLinkActive="act-nav">Sports</a></li>
+        <li><a routerLink="/business" routerLinkActive="act-nav">Business</a></li>
+        <li><a routerLink="/health" routerLinkActive="act-nav">Health</a></li>
+        <li><a routerLink="/world" routerLinkActive="act-nav">World</a></li>
       </ul>
     </nav>
     <div class="auth-buttons">
@@ -17,4 +17,4 @@
     </div>
   </div>
 </header>
-<Home/>
+<router-outlet></router-outlet>
