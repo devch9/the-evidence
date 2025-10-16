@@ -12,9 +12,133 @@
       </ul>
     </nav>
     <div class="auth-buttons">
-      <a href="#" class="btn btn-login">Login</a>
-      <a href="#" class="btn btn-signup">Sign Up</a>
+      <a class="btn btn-login" (click)="toggleLogin()">Login</a>
+      <a class="btn btn-signup" (click)="toggleSignupContainer()">Sign Up</a>
     </div>
   </div>
 </header>
+@if(isLogin){
+<div class="authcontainer">
+  <div class="auth-main-container">
+    <div class="close" (click)="toggleCloseLogin($event)">X</div>
+    <div class="auth-logo">
+      <h1>The Evidence</h1>
+      <p>Your trusted source for news</p>
+    </div>
+
+    <!-- Toggle Switch -->
+    <div class="auth-toggle-container">
+      <span class="auth-toggle-option" [class.active]="activeToggle === 0" (click)="switchToLogin()">
+        Login
+      </span>
+      <span class="auth-toggle-option" [class.active]="activeToggle === 1" (click)="switchToSignup()">
+        Signup
+      </span>
+      <div class="auth-toggle-slider" [class.signup]="isSignupMode"></div>
+    </div>
+
+    <!-- Success/Error Messages -->
+    <!-- <div class="auth-success-message" id="successMessage"></div>
+    <div class="auth-error-message" id="errorMessage"></div> -->
+
+    <!-- Forms Container -->
+    <div class="auth-forms-container">
+      <div #formWrapper class="auth-form-wrapper" [class.show-signup]="isSignupMode" id="formWrapper">
+        <!-- Login Form -->
+        <form class="auth-form" id="loginForm">
+          <div class="auth-form-group">
+            <label for="loginEmail">Email Address</label>
+            <input type="email" id="loginEmail" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="auth-form-group">
+            <label for="loginPassword">Password</label>
+            <div class="auth-password-group">
+              <input [type]="typeofpassword" id="loginPassword" name="password" placeholder="Enter your password" #el
+                required>
+              <span class="auth-password-toggle" (click)="togglePassword()" #ic>
+                {{ showPassword ? '🙈' : '👁️' }}
+              </span>
+            </div>
+          </div>
+
+          <div class="auth-forgot-password">
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="auth-submit-btn">Sign In</button>
+
+          <div class="auth-divider">
+            <span>or continue with</span>
+          </div>
+
+          <!-- <div class="auth-social-login">
+                    <button type="button" class="auth-social-btn" (click)="socialLogin('google')">
+                        <span>🔍</span> Google
+                    </button>
+                    <button type="button" class="auth-social-btn" (click)="socialLogin('facebook')">
+                        <span>📘</span> Facebook
+                    </button>
+                </div> -->
+        </form>
+
+        <!-- Signup Form -->
+        <form class="auth-form" id="signupForm">
+          <div class="auth-form-group">
+            <label for="signupName">Full Name</label>
+            <input type="text" id="signupName" name="name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="auth-form-group">
+            <label for="signupEmail">Email Address</label>
+            <input type="email" id="signupEmail" name="email" placeholder="Enter your email" required>
+          </div>
+
+          <div class="auth-form-group">
+            <label for="signupPassword">Password</label>
+            <div class="auth-password-group">
+              <input [type]=typeofsignuppassword id="signupPassword" name="password" placeholder="Create a password" required>
+              <span class="auth-password-toggle" (click)="toggleSignupPassword()">
+                {{ showSignupPassword ? '🙈' : '👁️' }}
+              </span>
+            </div>
+          </div>
+
+          <div class="auth-form-group">
+            <label for="confirmPassword">Confirm Password</label>
+            <div class="auth-password-group">
+              <input [type]=typeofsignupconfirmpassword id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"
+                required>
+              <span class="auth-password-toggle" (click)="toggleSignupConfirmPassword()">
+                {{ showSignupconfirmPassword ? '🙈' : '👁️' }}
+              </span>
+            </div>
+          </div>
+
+          <button type="submit" class="auth-submit-btn">Create Account</button>
+
+          <div class="auth-divider">
+            <span>or continue with</span>
+          </div>
+
+          <!-- <div class="auth-social-login">
+                    <button type="button" class="auth-social-btn" (click)="socialLogin('google')">
+                        <span>🔍</span> Google
+                    </button>
+                    <button type="button" class="auth-social-btn" (click)="socialLogin('facebook')">
+                        <span>📘</span> Facebook
+                    </button>
+                </div> -->
+
+          <div class="auth-terms">
+            By creating an account, you agree to our
+            <a href="#">Terms of Service</a> and
+            <a href="#">Privacy Policy</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+}
 <router-outlet></router-outlet>

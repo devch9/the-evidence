@@ -6,6 +6,7 @@ import { Sports } from './sports/sports';
 import { Business } from './business/business';
 import { World } from './world/world';
 import { Health } from './health/health';
+import { Blog } from './blog/blog';
 
 export const routes: Routes = [
     {path:'',component:Home},
@@ -14,5 +15,6 @@ export const routes: Routes = [
     {path:'sports',component:Sports},
     {path:'business',component:Business},
     {path:'health',component:Health},
-    {path:'world',component:World}
+    {path:'world',component:World},
+    {path:'blog',component:Blog}
 ];
